@@ -1,0 +1,190 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.productReviewsContainer {
+  flex: 1;
+  padding: 4vmax;
+  display: flex;
+  flex-direction: column;
+  gap: 2vmax;
+  align-items: center;
+}
+
+.productReviewsForm {
+  background-color: white;
+  width: 100%;
+  max-width: 40vmax;
+  padding: 3vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vmax;
+}
+
+.productReviewsFormHeading {
+  font: 600 2vmax "Roboto", sans-serif;
+  color: #363636;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+}
+
+.input-group svg {
+  color: tomato;
+  font-size: 1.5vmax;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 1vmax;
+  font: 400 1.2vmax "Roboto", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-group input:focus {
+  border-color: tomato;
+}
+
+#searchReviewsBtn {
+  background-color: tomato;
+  color: white;
+  font: 600 1.2vmax "Roboto", sans-serif;
+  padding: 1vmax;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#searchReviewsBtn:hover {
+  background-color: rgb(197, 72, 49);
+}
+
+#searchReviewsBtn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.productReviewsTable {
+  width: 100%;
+  max-width: 80vmax;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.productReviewsTable th,
+.productReviewsTable td {
+  padding: 1vmax;
+  text-align: left;
+  font: 400 1.2vmax "Roboto";
+  color: rgba(0, 0, 0, 0.897);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.productReviewsTable th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+}
+
+.productReviewsTable tr:hover {
+  background-color: #fafafa;
+}
+
+.greenColor {
+  color: #28a745;
+}
+
+.redColor {
+  color: #dc3545;
+}
+
+.action-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #363636;
+  transition: color 0.3s ease;
+}
+
+.action-button.delete:hover {
+  color: #dc3545;
+}
+
+.notification {
+  position: fixed;
+  top: 2vmax;
+  right: 2vmax;
+  padding: 1vmax 2vmax;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.notification.success {
+  background-color: #28a745;
+}
+
+.notification.error {
+  background-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .productReviewsContainer {
+    padding: 3vmax;
+  }
+
+  .productReviewsForm {
+    padding: 2vmax;
+  }
+
+  .productReviewsFormHeading {
+    font-size: 2.5rem;
+  }
+
+  .input-group svg {
+    font-size: 2rem;
+  }
+
+  .input-group input {
+    font-size: 1.5rem;
+    padding: 1.5vmax;
+  }
+
+  #searchReviewsBtn {
+    font-size: 1.5rem;
+    padding: 1.5vmax;
+  }
+
+  .productReviewsTable th,
+  .productReviewsTable td {
+    font-size: 1.5rem;
+    padding: 1.5vmax;
+  }
+
+  .action-button {
+    font-size: 1.5rem;
+  }
+}

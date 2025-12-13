@@ -1,0 +1,136 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.dashboardContainer {
+  flex: 1;
+  padding: 4vmax;
+  display: flex;
+  flex-direction: column;
+  gap: 2vmax;
+}
+
+.dashboardContainer h1 {
+  font: 600 2vmax "Roboto", sans-serif;
+  color: #363636;
+  text-align: center;
+}
+
+.dashboardSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 2vmax;
+  align-items: center;
+}
+
+.dashboardSummary > div:first-child {
+  background-color: white;
+  padding: 2vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboardSummary > div:first-child p {
+  font: 500 1.2vmax "Roboto";
+  color: rgba(0, 0, 0, 0.897);
+}
+
+.dashboardSummaryBox2 {
+  display: flex;
+  gap: 2vmax;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.dashboardSummaryBox2 > a {
+  background-color: white;
+  padding: 2vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: #363636;
+  text-align: center;
+  width: 15vmax;
+  transition: transform 0.3s ease;
+}
+
+.dashboardSummaryBox2 > a:hover {
+  transform: scale(1.05);
+}
+
+.dashboardSummaryBox2 > a p:first-child {
+  font: 600 1.2vmax "Roboto";
+}
+
+.dashboardSummaryBox2 > a p:last-child {
+  font: 700 1.5vmax "Roboto";
+  color: tomato;
+}
+
+.lineChart,
+.doughnutChart {
+  background-color: white;
+  padding: 2vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 2vmax;
+  max-width: 50vmax;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notification {
+  position: fixed;
+  top: 2vmax;
+  right: 2vmax;
+  padding: 1vmax 2vmax;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.notification.success {
+  background-color: #28a745;
+}
+
+.notification.error {
+  background-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .dashboardContainer {
+    padding: 3vmax;
+  }
+
+  .dashboardContainer h1 {
+    font-size: 2.5rem;
+  }
+
+  .dashboardSummaryBox2 > a {
+    width: 100%;
+  }
+
+  .lineChart,
+  .doughnutChart {
+    padding: 3vmax;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,240 @@
+.ProductDetails {
+  background-color: white;
+  width: 100vw;
+  max-width: 100%;
+  padding: 6vmax;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2vmax;
+}
+
+.ProductDetails > div {
+  flex: 1 1 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2vmax;
+  box-sizing: border-box;
+  border: 1px solid white;
+}
+
+.ProductDetails > div:last-child {
+  align-items: flex-start;
+}
+
+.CarouselImage {
+  width: 20vmax;
+  height: 20vmax;
+  object-fit: contain;
+}
+
+/* Product Name & ID */
+.detailsBlock-1 > h2 {
+  color: #363636;
+  font: 600 1.6vmax "Roboto", sans-serif;
+}
+
+.detailsBlock-1 > p {
+  color: rgba(54, 54, 54, 0.582);
+  font: 200 0.6vmax cursive;
+}
+
+/* Ratings block */
+.detailsBlock-2 {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+  border-top: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  width: 70%;
+  padding: 1vmax 0;
+}
+
+.detailsBlock-2-span {
+  font: 200 0.8vmax cursive;
+  color: rgba(0, 0, 0, 0.699);
+}
+
+/* Price and quantity */
+.detailsBlock-3 {
+  width: 70%;
+}
+
+.detailsBlock-3 > h1 {
+  color: rgba(17, 17, 17, 0.795);
+  font: 400 1.8vmax "Franklin Gothic Medium";
+  margin: 1vmax 0;
+}
+
+.detailsBlock-3-1 {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+  flex-wrap: wrap;
+}
+
+.detailsBlock-3-1-1 {
+  display: flex;
+  align-items: center;
+  gap: 0.5vmax;
+}
+
+.detailsBlock-3-1-1 > button,
+.detailsBlock-3-1 > button:last-child {
+  border: none;
+  padding: 0.5vmax 1vmax;
+  cursor: pointer;
+  font: 500 0.7vmax "Roboto", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.detailsBlock-3-1-1 > button {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+.detailsBlock-3-1-1 > button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.detailsBlock-3-1-1 > input {
+  width: 2vmax;
+  padding: 0.5vmax;
+  border: none;
+  text-align: center;
+  font: 400 0.8vmax "Roboto";
+  color: black;
+  outline: none;
+}
+
+.detailsBlock-3-1 > button:last-child {
+  background-color: tomato;
+  color: white;
+  border-radius: 20px;
+}
+.detailsBlock-3-1 > button:last-child:hover {
+  background-color: rgb(214, 84, 61);
+}
+
+.detailsBlock-3 > p {
+  border-top: 1px solid rgba(0, 0, 0, 0.205);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.205);
+  padding: 1vmax 0;
+  color: rgba(0, 0, 0, 0.651);
+  font: 400 1vmax "Roboto";
+  margin: 1vmax 0;
+}
+
+/* Description */
+.detailsBlock-4 {
+  font: 500 1.2vmax sans-serif;
+  color: rgba(0, 0, 0, 0.897);
+}
+.detailsBlock-4 > p {
+  font: 300 0.8vmax sans-serif;
+  color: rgba(0, 0, 0, 0.534);
+}
+
+/* Review button */
+.submitReview {
+  border: none;
+  background-color: tomato;
+  font: 500 0.7vmax "Roboto";
+  border-radius: 20px;
+  padding: 0.6vmax 2vmax;
+  margin: 1vmax 0;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.submitReview:hover {
+  background-color: rgb(197, 68, 45);
+  transform: scale(1.05);
+}
+
+/* Review Dialog */
+.submitDialog {
+  display: flex;
+  flex-direction: column;
+  gap: 1vmax;
+}
+.submitDialogTextArea {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  outline: none;
+  font: 300 1rem "Roboto";
+  resize: none;
+}
+
+/* Reviews */
+.reviewsHeading {
+  color: #000000be;
+  font: 500 1.4vmax "Roboto";
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  padding: 1vmax;
+  width: fit-content;
+  margin: 4vmax auto 2vmax auto;
+}
+.reviews {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 1vmax;
+}
+
+/* ReviewCard */
+.reviewCard {
+  flex: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(56, 56, 56, 0.116);
+  width: 25vmax;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1vmax;
+  padding: 2vmax;
+  background-color: #fff;
+}
+.reviewCard > img {
+  width: 5vmax;
+}
+.reviewCard > p {
+  font: 600 0.9vmax "Roboto";
+  color: rgba(0, 0, 0, 0.836);
+}
+.reviewCardComment {
+  font: 300 0.8vmax cursive;
+  color: rgba(0, 0, 0, 0.445);
+}
+
+/* No reviews fallback */
+.noReviews {
+  font: 400 1.3vmax "Gill Sans";
+  text-align: center;
+  color: rgba(0, 0, 0, 0.548);
+  margin-bottom: 2vmax;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .ProductDetails {
+    flex-direction: column;
+    padding: 3vmax;
+  }
+
+  .ProductDetails > div {
+    width: 100%;
+  }
+
+  .detailsBlock-3-1 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .submitReview {
+    width: 100%;
+    text-align: center;
+  }
+}

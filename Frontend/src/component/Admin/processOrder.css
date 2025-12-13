@@ -1,0 +1,244 @@
+.dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.processOrderContainer {
+  flex: 1;
+  padding: 4vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.processOrderPage {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2vmax;
+  width: 100%;
+  max-width: 80vmax;
+}
+
+.processOrderPage.delivered {
+  display: block;
+}
+
+.orderDetailsSection {
+  background-color: white;
+  padding: 2vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.orderDetailsSection h2 {
+  font: 600 1.8vmax "Roboto", sans-serif;
+  color: #363636;
+  margin-bottom: 1vmax;
+}
+
+.orderDetailsContainerBox {
+  margin: 1vmax 0;
+}
+
+.orderDetailsContainerBox > div {
+  display: flex;
+  margin: 0.5vmax 0;
+}
+
+.orderDetailsContainerBox p {
+  font: 500 1.2vmax "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.897);
+  width: 100px;
+}
+
+.orderDetailsContainerBox span {
+  font: 400 1.2vmax "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.greenColor {
+  color: #28a745;
+}
+
+.redColor {
+  color: #dc3545;
+}
+
+.orderItemsContainer {
+  margin: 2vmax 0;
+}
+
+.orderItemsContainer > div {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+  margin: 1vmax 0;
+}
+
+.orderItemsContainer img {
+  width: 5vmax;
+  height: 5vmax;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.orderItemsContainer a {
+  font: 400 1.2vmax "Roboto", sans-serif;
+  color: #363636;
+  text-decoration: none;
+  width: 50%;
+}
+
+.orderItemsContainer a:hover {
+  color: tomato;
+}
+
+.orderItemsContainer span {
+  font: 400 1.2vmax "Roboto", sans-serif;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.updateOrderSection {
+  background-color: white;
+  padding: 2vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.updateOrderSection.hidden {
+  display: none;
+}
+
+.updateOrderForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vmax;
+}
+
+.updateOrderForm h1 {
+  font: 600 2vmax "Roboto", sans-serif;
+  color: #363636;
+  text-align: center;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+}
+
+.input-group svg {
+  color: tomato;
+  font-size: 1.5vmax;
+}
+
+.input-group select {
+  width: 100%;
+  padding: 1vmax;
+  font: 400 1.2vmax "Roboto", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+}
+
+.input-group select:focus {
+  border-color: tomato;
+}
+
+#updateOrderBtn {
+  background-color: tomato;
+  color: white;
+  font: 600 1.2vmax "Roboto", sans-serif;
+  padding: 1vmax;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#updateOrderBtn:hover {
+  background-color: rgb(197, 72, 49);
+}
+
+#updateOrderBtn.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.notification {
+  position: fixed;
+  top: 2vmax;
+  right: 2vmax;
+  padding: 1vmax 2vmax;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.notification.success {
+  background-color: #28a745;
+}
+
+.notification.error {
+  background-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .processOrderContainer {
+    padding: 3vmax;
+  }
+
+  .processOrderPage {
+    grid-template-columns: 1fr;
+  }
+
+  .orderDetailsSection h2 {
+    font-size: 2.2rem;
+  }
+
+  .orderDetailsContainerBox p,
+  .orderDetailsContainerBox span,
+  .orderItemsContainer a,
+  .orderItemsContainer span {
+    font-size: 1.5rem;
+  }
+
+  .orderItemsContainer img {
+    width: 8vmax;
+    height: 8vmax;
+  }
+
+  .updateOrderForm {
+    padding: 2vmax;
+  }
+
+  .updateOrderForm h1 {
+    font-size: 2.5rem;
+  }
+
+  .input-group svg {
+    font-size: 2rem;
+  }
+
+  .input-group select {
+    font-size: 1.5rem;
+    padding: 1.5vmax;
+  }
+
+  #updateOrderBtn {
+    font-size: 1.5rem;
+    padding: 1.5vmax;
+  }
+}

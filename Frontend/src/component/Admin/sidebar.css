@@ -1,0 +1,113 @@
+.sidebar {
+  width: 20vmax;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 2vmax;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  min-height: 100vh;
+}
+
+.sidebar-logo {
+  width: 10vmax;
+  margin: 1vmax auto;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.897);
+  font: 400 1.2vmax "Roboto";
+  margin: 1vmax 0;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: tomato;
+  transform: translateX(0.5vmax);
+}
+
+.sidebar a p {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+}
+
+.sidebar-tree {
+  margin: 1vmax 0;
+}
+
+.sidebar-tree-toggle {
+  display: flex;
+  align-items: center;
+  gap: 1vmax;
+  font: 400 1.2vmax "Roboto";
+  color: rgba(0, 0, 0, 0.897);
+  cursor: pointer;
+  padding: 0.5vmax;
+  transition: all 0.3s ease;
+}
+
+.sidebar-tree-toggle:hover {
+  color: tomato;
+}
+
+.sidebar-tree-items {
+  padding-left: 2vmax;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vmax;
+}
+
+.sidebar-tree-items a p {
+  font: 400 1vmax "Roboto";
+}
+
+.notification {
+  position: fixed;
+  top: 2vmax;
+  right: 2vmax;
+  padding: 1vmax 2vmax;
+  border-radius: 5px;
+  color: white;
+  z-index: 1000;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+.notification.success {
+  background-color: #28a745;
+}
+
+.notification.error {
+  background-color: #dc3545;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 3vmax;
+  }
+
+  .sidebar-logo {
+    width: 20vmax;
+  }
+
+  .sidebar a,
+  .sidebar-tree-toggle {
+    font-size: 1.5rem;
+  }
+
+  .sidebar-tree-items a p {
+    font-size: 1.2rem;
+  }
+}
